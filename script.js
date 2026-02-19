@@ -97,7 +97,7 @@ const books = [
     rating: 4.3,
     description:
       "A psychological horror novel that tells the story of the Torrance family's terrifying experiences at the haunted Overlook Hotel.",
-    image: 'book-images/the-shining.jpg'
+    image: 'book-images/the-shining.png'
   },
   {
     title: 'The Chronicles of Narnia: The Lion, the Witch and the Wardrobe',
