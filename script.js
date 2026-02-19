@@ -204,6 +204,13 @@ function renderItems(list) {
   library.appendChild(frag);
 }
 
-document.addEventListener('DOMContentLoaded', () => renderItems(books));
+document.addEventListener('DOMContentLoaded', () => {
+  renderItems(books);
+  const sortBtn = document.getElementById('sortButton');
+  if (sortBtn) sortBtn.addEventListener('click', () => SortItemsByRating());
+});
 
-
+function SortItemsByRating(rating) {
+  const sortedBooks = [...books].sort((a, b) => b.rating - a.rating);
+  renderItems(sortedBooks);
+}
