@@ -1,44 +1,106 @@
-body, button {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  letter-spacing: -0.5px;
 }
 
 .buttons {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 15px;
+  margin-bottom: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 28px;
   border: none;
-  background: blue;
-  border-radius: 5px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 25px;
   color: white;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 .library {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .library .item {
-  border: 1px solid blue;
-  border-radius: 20px;
-  width: 250px;
+  border: none;
+  border-radius: 15px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.library .item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .library .item p {
-  margin: 4px;
+  margin: 8px 0;
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: #555;
 }
 
-.item img, .item img {
-  width: 200px;
-  height: 200px;
+.library .item p:first-of-type {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+.item img {
+  width: 240px;
+  height: 240px;
   object-fit: cover;
-  margin-top: auto;
+  margin: 10px -20px -20px -20px;
+  border-radius: 0 0 15px 15px;
+  transition: transform 0.3s ease;
+}
+
+.library .item:hover img {
+  transform: scale(1.05);
 }
